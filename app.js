@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(authRoutes);
 db.connectToDatabase().then(function () {
+    console.log('connected to database!');
     app.listen(3000);
 }
 ).catch(function (error) {
